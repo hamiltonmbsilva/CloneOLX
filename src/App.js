@@ -2,12 +2,23 @@ import React from "react";
 import { connect } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 
+import { Template } from "./components/MainComponents";
+import Header from "./components/partiais/Header";
+import Footer from "./components/partiais/Footer";
+
 import Routes from "./Routes";
 
 const Page = (props) => {
   return (
     <BrowserRouter>
-      <Routes />
+      <Template>
+        <Header />
+
+        <Routes />
+
+        <Footer />
+      </Template>
+      
     </BrowserRouter>    
   );
 }
